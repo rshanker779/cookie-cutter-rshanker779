@@ -13,12 +13,12 @@ or "pip install -e git+ssh://git@bitbucket.org/rshanker779/rshanker779_common.gi
 """
 )
 setup(
-    name={{cookiecutter.project_name}},
+    name="{{cookiecutter.project_name}}",
     version="1.0.0",
-    author={{cookiecutter.author}},
-    author_email={{cookiecutter.email}},
-    description={{cookiecutter.description}},
-    long_description=long_description if long_description is not None else {{cookiecutter.description}}
+    author="{{cookiecutter.author}}",
+    author_email="{{cookiecutter.email}}",
+    description="{{cookiecutter.description}}",
+    long_description=long_description if long_description is not None else "{{cookiecutter.description}}",
     license="MIT",
     python_requires=">=3.5",
     install_requires=[
