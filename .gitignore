@@ -8,3 +8,5 @@ dist/*
 .coverage
 *config.json*
 *.pkl
+*.log
+*.log.*
