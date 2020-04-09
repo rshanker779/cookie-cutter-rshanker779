@@ -5,13 +5,6 @@ try:
         long_description = f.read()
 except:
     long_description = None
-print(
-    """
-Currently ssh cloning of a remote is not supported by setuptools.
-To fix this run "pip install -e git+git://<repo_url>"
-or "pip install -e git+ssh://git@bitbucket.org/rshanker779/rshanker779_common.git#egg=rshanker779_common"
-"""
-)
 setup(
     name="{{cookiecutter.project_name}}",
     version="1.0.0",
@@ -20,17 +13,12 @@ setup(
     description="{{cookiecutter.description}}",
     long_description=long_description if long_description is not None else "{{cookiecutter.description}}",
     license="MIT",
-    python_requires=">=3.5",
+    python_requires=">=3.7",
     install_requires=[
-        "black",
-        "pre-commit",
         "rshanker779_common",
         "coverage",
     ],
     packages=find_packages(),
     entry_points={},
-    test_suite="tests",
-    dependency_links=[
-        "git+https://rshanker779@bitbucket.org/rshanker779/rshanker779_common.git#egg=rshanker779_common"
-    ],
+    test_suite="{{cookiecutter.project_name}}/tests",
 )
