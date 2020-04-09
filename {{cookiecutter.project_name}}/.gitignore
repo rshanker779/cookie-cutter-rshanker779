@@ -8,3 +8,4 @@ dist/*
 .coverage
 *config.json*
 *.pkl
+htmlcov/*
